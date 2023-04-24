@@ -2,57 +2,59 @@
 \chapter{Desenvolvimento}\label{cap:desenvolvimento}
 % ----------------------------------------------------------
 Deve-se inserir texto entre as seções.
-
 % ----------------------------------------------------------
-\section{Exposição do tema ou matéria}
+\subsection{Levantamento de requisitos}
 % ----------------------------------------------------------
-
-É a parte principal e mais extensa do trabalho. Deve apresentar a fundamentação teórica, a metodologia, os resultados e a discussão. Divide-se em seções e subseções conforme a NBR 6024 \cite{NBR6024:2012}.
-
-Quanto à sua estrutura e projeto gráfico, segue as recomendações da \gls{ABNT} para preparação de trabalhos acadêmicos, a NBR 14724, de 2011 \cite{NBR14724:2011}.
-
-\begin{figure}[htb]
-	\caption{\label{fig:Fig_1}Elementos do trabalho acadêmico.}
-	\begin{center}
-		\includegraphics{images/imagem.pdf}
-	\end{center}
-	\fonte{Universidade Federal do Paraná (1996).}
-\end{figure}
-
-% ----------------------------------------------------------
-\subsection{Formatação do texto}
-% ----------------------------------------------------------
-
-No que diz respeito à estrutura do trabalho, recomenda-se que:
-\begin{alineas}
-	\item o texto deve ser justificado, digitado em cor preta, podendo utilizar outras cores somente para as ilustrações;
-	\item utilizar papel branco ou reciclado para impressão;
-	\item  \textbf{se o trabalho for impresso}, os elementos pré-textuais devem iniciar no anverso da folha, com exceção da ficha catalográfica ou ficha de identificação da obra;
-	\item \textbf{se o trabalho for impresso}, os elementos textuais e pós-textuais devem ser digitados no anverso e verso das folhas, quando o trabalho for impresso;
-
-	\item as seções primárias devem começar sempre em páginas ímpares, quando o trabalho for impresso; e 
-	\item deixar um espaço entre o título da seção/subseção e o texto e entre o texto e o título da subseção.
-\end{alineas}
-
-No \autoref{qua:Quadro_1} estão as especificações para a formatação do texto.
+\begin{quadro}[htb]
+	\centering
+	\caption{\label{Formatação do texto.}Requisitos funcionais}	
+	\begin{tabular}{|l|p{11cm}|}
+		\hline
+		\textbf{Identificação}    & \textbf{Requisito}\\ \hline
+		RF01        			  & Manter usuário\\ \hline
+		RF02        			  & Realizar login\\ \hline
+		RF03         			  & Cadastro de anúncio\\ \hline
+		RF04        			  & Avaliação do profissional\\ \hline
+		RF05        			  & Histórico de serviços prestados\\ \hline
+		RF06        			  & Avaliação do profissional\\ \hline
+	\end{tabular}
+	\fonte{\textcite{Elaborado pelos autores(2023)}.}
+\end{quadro}
 
 \begin{quadro}[htb]
 	\centering
-	\caption{\label{qua:Quadro_1}Formatação do texto.}	
+	\caption{\label{Formatação do texto.}Requisitos não funcionais}	
 	\begin{tabular}{|l|p{11cm}|}
 		\hline
-		\textbf{Formato do papel} & A4.\\ \hline
-		\textbf{Impressão}        & A norma recomenda que \textbf{caso seja necessário imprimir}, deve-se utilizar a frente e o verso da página.\\ \hline
-		\textbf{Margens}          & Superior: 3, Inferior: 2, Interna: 3 e Externa: 2. Usar margens espelhadas quando o  trabalho for impresso.\\ \hline
-		\textbf{Paginação}        & As páginas dos elementos pré-textuais devem ser contadas, mas não numeradas. Para trabalhos digitados somente no anverso, a numeração das páginas deve constar no canto superior direito da página, a 2 cm da borda, figurando a partir da primeira folha da  parte textual. Para trabalhos digitados no anverso e no verso, a numeração deve constar no canto superior direito, no anverso, e no canto superior esquerdo no verso.\\ \hline
-		\textbf{Espaçamento}      & O texto deve ser redigido com espaçamento entre linhas 1,5, excetuando-se as citações de mais de três linhas, notas de rodapé, referências, legendas das ilustrações e das tabelas, natureza (tipo do trabalho, objetivo, nome da instituição a que é submetido e área de concentração), que devem ser digitados em espaço simples, com fonte menor. As referências devem ser separadas entre si por um espaço simples em branco.\\ \hline
-		\textbf{Paginação}        & A contagem inicia na folha de rosto, mas se \textbf{insere o número da página na introdução} até o final do trabalho.\\ \hline
-		\textbf{Fontes sugeridas} & Arial ou Times New Roman.\\ \hline
-		\textbf{Tamanho da fonte} & \textbf{Fonte tamanho 12 para o texto}, incluindo os títulos das seções e subseções. As citações com mais de três linhas, notas de rodapé, paginação, dados internacionais de catalogação, legendas e fontes das ilustrações e das tabelas devem ser de tamanho menor. Adotamos, neste \textit{template} \textbf{fonte tamanho 10}.\\ \hline
-		\textbf{Nota de rodapé}   & Devem ser digitadas dentro da margem, ficando separadas por um espaço simples por entre as linhas e por filete de 5 cm a partir da margem esquerda. A partir da segunda linha, devem ser alinhadas embaixo da primeira letra da primeira palavra da primeira linha.\\ \hline
+		\textbf{Identificação}    & \textbf{Requisito}\\ \hline
+		RNF01        			  & Banco de dados relacional(PostgreSQL)\\ \hline
+		RNF02        			  & Interface mobile em ReactJS Native\\ \hline
 	\end{tabular}
-	\fonte{\textcite{NBR14724:2011}.}
+	\fonte{\textcite{Elaborado pelos autores(2023)}.}
 \end{quadro}
+
+\begin{quadro}[htb]
+	\centering
+	\caption{\label{Formatação do texto.}Requisitos não funcionais}	
+	\begin{tabular}{|l|p{11cm}|}
+		\hline
+		\textbf{Nome}    & Manter usuário\\ \hline
+		\textbf{Tipo}    & Funcional\\ \hline
+		\multicolumn{2}{|c|}{Descrição}\\ \hline
+		\multicolumn{2}{|p{12cm}|}{
+			O sistema deve permitir o cadastro de usuários e o gerenciamento de suas informações. \newline
+			\newline Critérios de Aceitação: \newline
+			O sistema deve permitir o cadastro de novos clientes com as informações básicas (nome, e-mail, senha, CPF, cidade, endereço e telefone); \newline
+			\newline O sistema deve permitir o cadastro de novos prestadores com as informações básicas (nome, e-mail, senha, CPF, ou CNPJ, cidade, categoria do serviços prestados e telefone); \newline
+			\newline O sistema deve permitir a atualização das informações do usuário, incluindo nome, e-mail e senha; \newline
+			\newline O sistema deve permitir a exclusão do usuário; \newline
+			O sistema deve garantir a segurança das informações dos usuários, armazenando as senhas de forma criptografada.
+			} \\ \hline
+	\end{tabular}
+	\fonte{\textcite{Elaborado pelos autores(2023)}.}
+\end{quadro}
+
+
 
 % ----------------------------------------------------------
 \subsubsection{As ilustrações}
