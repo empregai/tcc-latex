@@ -17,7 +17,10 @@ Segue os requisitos do projeto
 		RF03         			  & Cadastro de anúncio\\ \hline
 		RF04        			  & Avaliação do profissional\\ \hline
 		RF05        			  & Histórico de serviços prestados\\ \hline
-		RF06        			  & Avaliação do profissional\\ \hline
+		RF06        			  & Histórico de serviços contratados \\ \hline
+		RF07        			  & Candidatar no anúncio \\ \hline
+		RF08        			  & Candidatar no anúncio 
+		\\ \hline
 	\end{tabular}
 	\fonte{\textcite{Elaborado pelos autores(2023)}.}
 \end{quadro}
@@ -138,15 +141,57 @@ Segue os requisitos do projeto
 	\caption{\label{Formatação do texto.}Descrição RF06}	
 	\begin{tabular}{|l|p{11cm}|}
 		\hline
-		\textbf{Nome}    & Histórico de serviços prestados\\ \hline
+		\textbf{Nome}    & Histórico de serviços contratados\\ \hline
 		\textbf{Tipo}    & Funcional\\ \hline
 		\multicolumn{2}{|c|}{Descrição}\\ \hline
 		\multicolumn{2}{|p{12cm}|}{
 			O sistema deve permitir que o cliente tenha acesso ao histórico de serviços contratados por ele, incluindo informações como data, valor, nome do prestador de serviço e avaliação. \newline
 			\newline Critérios de Aceitação: \newline
-			O sistema deve apresentar uma lista dos serviços contratados pelo cliente;
-Cada serviço deve apresentar informações como data, nome do prestador de serviço e avaliação; \newline
+			O sistema deve apresentar uma lista dos serviços contratados pelo cliente; \newline
+            Cada serviço deve apresentar informações como data, nome do prestador de serviço e avaliação; \newline
 			\newline O histórico deve ser atualizado automaticamente após a conclusão do serviço;
+			} \\ \hline
+	\end{tabular}
+	\fonte{\textcite{Elaborado pelos autores(2023)}.}
+\end{quadro}
+
+\begin{quadro}[htb]
+	\centering
+	\caption{\label{Formatação do texto.}Descrição RF07}	
+	\begin{tabular}{|l|p{11cm}|}
+		\hline
+		\textbf{Nome}    & Candidatar no anúncio\\ \hline
+		\textbf{Tipo}    & Funcional\\ \hline
+		\multicolumn{2}{|c|}{Descrição}\\ \hline
+		\multicolumn{2}{|p{12cm}|}{
+			O sistema deve permitir que prestadores de serviços possam se candidatar a anúncios criados pelos clientes. \newline
+			\newline Critérios de Aceitação: \newline
+			O prestador de serviços deve ser capaz de visualizar os anúncios disponíveis para candidatura; \newline
+            O prestador de serviços deve poder se candidatar a um anúncio ao clicar em um botão específico; \newline
+			O cliente deve ser notificado da candidatura do prestador de serviços; \newline
+			O cliente deve ser capaz de visualizar as candidaturas recebidas para seu anúncio; \newline
+			O cliente deve ser capaz de selecionar e contatar o prestador de serviços escolhido para o anúncio.
+			} \\ \hline
+	\end{tabular}
+	\fonte{\textcite{Elaborado pelos autores(2023)}.}
+\end{quadro}
+
+\begin{quadro}[htb]
+	\centering
+	\caption{\label{Formatação do texto.}Descrição RF08}	
+	\begin{tabular}{|l|p{11cm}|}
+		\hline
+		\textbf{Nome}    & Concluir o anúncio\\ \hline
+		\textbf{Tipo}    & Funcional\\ \hline
+		\multicolumn{2}{|c|}{Descrição}\\ \hline
+		\multicolumn{2}{|p{12cm}|}{
+			O sistema deve permitir que clientes concluam um anúncio após a seleção de um prestador de serviços. \newline
+			\newline Critérios de Aceitação: \newline
+			O cliente deve ser capaz de visualizar a lista de candidaturas recebidas para o anúncio; \newline
+            O cliente deve ser capaz de selecionar um prestador de serviços para realizar o trabalho; \newline
+			O cliente deve ser capaz de confirmar a seleção do prestador de serviços; \newline
+			O prestador de serviço de se informado que sua candidatura foi aceita; \newline
+			O sistema deve permitir que o cliente avalie o prestador de serviços após a conclusão do trabalho.
 			} \\ \hline
 	\end{tabular}
 	\fonte{\textcite{Elaborado pelos autores(2023)}.}
