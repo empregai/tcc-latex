@@ -1,196 +1,34 @@
 % ----------------------------------------------------------
-\chapter{Desenvolvimento}\label{cap:desenvolvimento}
+\chapter{PROCESSO DE DESENVOLVIMENTO DE SOFTWARE}\label{cap:desenvolvimento}
 % ----------------------------------------------------------
-Deve-se inserir texto entre as seções.
+Para \textcite{Pressman2016} os modelos de processos de desenvolvimento 
+tradicionais concentram-se em estruturar e ordenar o desenvolvimento de software. As 
+atividades e tarefas ocorrem sequencialmente, com diretrizes de progresso bem 
+definidas. O autor define algumas atividades genéricas para os processos de 
+desenvolvimento de software, sendo elas:
+\begin{itemize}[label=$\bullet$]
+	\item Comunicação: Levantamento de requisitos.
+	\item Planejamento: Estimativas, cronograma, acompanhamento.
+	\item Modelagem: Análise, projeto.
+	\item Construção: Código, testes.
+	\item Entrega/Disponibilização: Entrega, feedback.
+	\end{itemize}
+	Segundo \textcite{Pressman2016}, o modelo incremental combina os fluxos de processo linear
+	e paralelo dos elementos. O modelo incremental aplicasequências lineares de
+	forma escalonada, à medida que o tempo vai avançando. Cada sequência linear
+	produz incrementos entregáveis do software. \newline
+	Segundo \textcite{Pressman2016} destaca que, quando se utiliza um modelo incremental,
+	frequentemente o primeiro incremento é um produto essencial. Esse 
+	produto essencial é utilizado pelo cliente (ou passa por uma avaliaão detalhada). Como 
+	resultado do uso e/ou avaliação, é desenvolvido um planejamento para o incremento
+	seguinte. O planejamento já considera a modificação do produto essencial para melhor 
+	se adequar às necessidades do cliente e à entrega de recursos e funcionalidades 
+	adicionais
+	Tendo em vista disso, o seguinte projeto tem como objetivo utilizar o processo 
+	incremental para o desenvolvimento do software Empregai, com validações de 
+	progresso quinzenais. O código fonte será disponibilizado no GitHub.
+
 % ----------------------------------------------------------
-\subsection{Lista de requisitos}
-Segue os requisitos do projeto
+\subsection{Lista de Abreviaturas nos Artefatos do Documento}
+Lista de Abreviaturas nos Artefatos do Documento
 % ----------------------------------------------------------
-\begin{quadro}[htb]
-	\centering
-	\caption{\label{Formatação do texto.}Requisitos funcionais}	
-	\begin{tabular}{|l|p{11cm}|}
-		\hline
-		\textbf{Identificação}    & \textbf{Requisito}\\ \hline
-		RF01        			  & Manter usuário\\ \hline
-		RF02        			  & Realizar login\\ \hline
-		RF03         			  & Cadastro de anúncio\\ \hline
-		RF04        			  & Avaliação do profissional\\ \hline
-		RF05        			  & Histórico de serviços prestados\\ \hline
-		RF06        			  & Avaliação do profissional\\ \hline
-	\end{tabular}
-	\fonte{\textcite{Elaborado pelos autores(2023)}.}
-\end{quadro}
-
-\begin{quadro}[htb]
-	\centering
-	\caption{\label{Formatação do texto.}Requisitos não funcionais}	
-	\begin{tabular}{|l|p{11cm}|}
-		\hline
-		\textbf{Identificação}    & \textbf{Requisito}\\ \hline
-		RNF01        			  & Banco de dados relacional(PostgreSQL)\\ \hline
-		RNF02        			  & Interface mobile em ReactJS Native\\ \hline
-	\end{tabular}
-	\fonte{\textcite{Elaborado pelos autores(2023)}.}
-\end{quadro}
-
-\subsection{Descrição dos requisitos funcionais }
-
-\begin{quadro}[htb]
-	\centering
-	\caption{\label{Formatação do texto.}Descrição RF01}	
-	\begin{tabular}{|l|p{11cm}|}
-		\hline
-		\textbf{Nome}    & Manter usuário\\ \hline
-		\textbf{Tipo}    & Funcional\\ \hline
-		\multicolumn{2}{|c|}{Descrição}\\ \hline
-		\multicolumn{2}{|p{12cm}|}{
-			O sistema deve permitir o cadastro de usuários e o gerenciamento de suas informações. \newline
-			\newline Critérios de Aceitação: \newline
-			O sistema deve permitir o cadastro de novos clientes com as informações básicas (nome, e-mail, senha, CPF, cidade, endereço e telefone); \newline
-			\newline O sistema deve permitir o cadastro de novos prestadores com as informações básicas (nome, e-mail, senha, CPF, ou CNPJ, cidade, categoria do serviços prestados e telefone); \newline
-			\newline O sistema deve permitir a atualização das informações do usuário, incluindo nome, e-mail e senha; \newline
-			\newline O sistema deve permitir a exclusão do usuário; \newline
-			O sistema deve garantir a segurança das informações dos usuários, armazenando as senhas de forma criptografada.
-			} \\ \hline
-	\end{tabular}
-	\fonte{\textcite{Elaborado pelos autores(2023)}.}
-\end{quadro}
-
-\begin{quadro}[htb]
-	\centering
-	\caption{\label{Formatação do texto.}Descrição RF02}	
-	\begin{tabular}{|l|p{11cm}|}
-		\hline
-		\textbf{Nome}    & Realizar login\\ \hline
-		\textbf{Tipo}    & Funcional\\ \hline
-		\multicolumn{2}{|c|}{Descrição}\\ \hline
-		\multicolumn{2}{|p{12cm}|}{
-			O sistema deve permitir que os usuários realizem login para acessar suas contas. \newline
-			\newline Critérios de Aceitação: \newline
-			O sistema deve apresentar um formulário de login com os campos de e-mail e senha; \newline
-			\newline O sistema deve validar as informações de login e permitir o acesso ao usuário caso as informações estejam corretas;\newline
-			\newline O sistema deve apresentar uma mensagem de erro caso as informações de login estejam incorretas;
-			} \\ \hline
-	\end{tabular}
-	\fonte{\textcite{Elaborado pelos autores(2023)}.}
-\end{quadro}
-
-\begin{quadro}[htb]
-	\centering
-	\caption{\label{Formatação do texto.}Descrição RF03}	
-	\begin{tabular}{|l|p{11cm}|}
-		\hline
-		\textbf{Nome}    & Cadastro de anúncio\\ \hline
-		\textbf{Tipo}    & Funcional\\ \hline
-		\multicolumn{2}{|c|}{Descrição}\\ \hline
-		\multicolumn{2}{|p{12cm}|}{
-			O sistema deve permitir que os clientes cadastrem seus anúncios de serviços. \newline
-			\newline Critérios de Aceitação: \newline
-			O sistema deve apresentar um formulário para o cadastro de anúncio, contendo informações como título, descrição, categoria eu localização; \newline
-			\newline O sistema deve permitir que o cliente edite e exclua seus anúncios;\newline
-			\newline O sistema deve validar as informações inseridas pelo cliente, garantindo que o anúncio contenha informações suficientes e válidas para ser publicado.
-			} \\ \hline
-	\end{tabular}
-	\fonte{\textcite{Elaborado pelos autores(2023)}.}
-\end{quadro}
-
-\begin{quadro}[htb]
-	\centering
-	\caption{\label{Formatação do texto.}Descrição RF04}	
-	\begin{tabular}{|l|p{11cm}|}
-		\hline
-		\textbf{Nome}    & Avaliação do profissional\\ \hline
-		\textbf{Tipo}    & Funcional\\ \hline
-		\multicolumn{2}{|c|}{Descrição}\\ \hline
-		\multicolumn{2}{|p{12cm}|}{
-			O sistema deve permitir que os clientes avaliem os prestadores de serviço após a realização do serviço. \newline
-			\newline Critérios de Aceitação: \newline
-			O sistema deve apresentar um campo de avaliação com uma escala numérica ou de estrelas e um campo para o cliente deixar um comentário sobre a qualidade do serviço prestado; \newline
-			\newline O sistema deve permitir que o cliente avalie apenas os prestadores de serviço que já foram contratados por ele; \newline
-			\newline O sistema deve disponibilizar as avaliações dos prestadores de serviço para que outros clientes possam consultar antes de contratar os serviços dos mesmos.
-			} \\ \hline
-	\end{tabular}
-	\fonte{\textcite{Elaborado pelos autores(2023)}.}
-\end{quadro}
-
-\begin{quadro}[htb]
-	\centering
-	\caption{\label{Formatação do texto.}Descrição RF05}	
-	\begin{tabular}{|l|p{11cm}|}
-		\hline
-		\textbf{Nome}    & Histórico de serviços prestados\\ \hline
-		\textbf{Tipo}    & Funcional\\ \hline
-		\multicolumn{2}{|c|}{Descrição}\\ \hline
-		\multicolumn{2}{|p{12cm}|}{
-			O sistema deve permitir que os prestadores de serviço visualizem seu histórico de serviços prestados. \newline
-			\newline Critérios de Aceitação: \newline
-			O sistema deve exibir uma lista de todos os serviços prestados pelo prestador, com informações como o título do anúncio e a data de realização; \newline
-			\newline O sistema deve permitir que o cliente avalie apenas os prestadores de serviço que já foram contratados por ele; \newline
-			\newline O sistema deve disponibilizar as avaliações dos prestadores de serviço para que outros clientes possam consultar antes de contratar os serviços dos mesmos.
-			} \\ \hline
-	\end{tabular}
-	\fonte{\textcite{Elaborado pelos autores(2023)}.}
-\end{quadro}
-
-\begin{quadro}[htb]
-	\centering
-	\caption{\label{Formatação do texto.}Descrição RF06}	
-	\begin{tabular}{|l|p{11cm}|}
-		\hline
-		\textbf{Nome}    & Histórico de serviços prestados\\ \hline
-		\textbf{Tipo}    & Funcional\\ \hline
-		\multicolumn{2}{|c|}{Descrição}\\ \hline
-		\multicolumn{2}{|p{12cm}|}{
-			O sistema deve permitir que o cliente tenha acesso ao histórico de serviços contratados por ele, incluindo informações como data, valor, nome do prestador de serviço e avaliação. \newline
-			\newline Critérios de Aceitação: \newline
-			O sistema deve apresentar uma lista dos serviços contratados pelo cliente;
-Cada serviço deve apresentar informações como data, nome do prestador de serviço e avaliação; \newline
-			\newline O histórico deve ser atualizado automaticamente após a conclusão do serviço;
-			} \\ \hline
-	\end{tabular}
-	\fonte{\textcite{Elaborado pelos autores(2023)}.}
-\end{quadro}
-
-\subsection{Descrição dos requisitos não funcionais }
-
-\begin{quadro}[htb]
-	\centering
-	\caption{\label{Formatação do texto.}Descrição RNF01}	
-	\begin{tabular}{|l|p{11cm}|}
-		\hline
-		\textbf{Nome}    & Banco de dados relacional(PostgreSQL)\\ \hline
-		\textbf{Tipo}    & Não funcional\\ \hline
-		\multicolumn{2}{|c|}{Descrição}\\ \hline
-		\multicolumn{2}{|p{12cm}|}{
-			O sistema deve utilizar um banco de dados relacional PostgreSQL para armazenamento de dados. \newline
-			\newline Critérios de Aceitação: \newline
-			O banco de dados deve ser implementado em PostgreSQL;
-			Deve ser garantida a integridade e consistência dos dados armazenados;\newline
-			\newline O esquema do banco de dados deve ser projetado de acordo com as necessidades do sistema; \newline
-			\newline O acesso ao banco de dados deve ser realizado através de um usuário com permissões adequadas; \newline
-			\newline O sistema deve permitir a exclusão do usuário; \newline
-			O banco de dados deve ser capaz de suportar um grande volume de dados e garantir a disponibilidade do sistema.
-			} \\ \hline
-	\end{tabular}
-	\fonte{\textcite{Elaborado pelos autores(2023)}.}
-\end{quadro}
-
-\begin{quadro}[htb]
-	\centering
-	\caption{\label{Formatação do texto.}Descrição RNF02}	
-	\begin{tabular}{|l|p{11cm}|}
-		\hline
-		\textbf{Nome}    & Interface mobile em ReactJS Native utilizando Expo\\ \hline
-		\textbf{Tipo}    & Não funcional\\ \hline
-		\multicolumn{2}{|c|}{Descrição}\\ \hline
-		\multicolumn{2}{|p{12cm}|}{
-			O sistema deve utilizar React Native em conjunto com a plataforma Expo para desenvolvimento da interface mobile. \newline
-			\newline Critérios de Aceitação: \newline
-			A interface deve ser desenvolvida em React Native utilizando a plataforma Expo; \newline
-			\newline A interface deve ser responsiva e adaptável a diferentes tamanhos de tela;\newline
-			\newline A interface deve ser desenvolvida de acordo com as diretrizes da plataforma para garantir compatibilidade e desempenho.
-			} \\ \hline
-	\end{tabular}
-	\fonte{\textcite{Elaborado pelos autores(2023)}.}
-\end{quadro}
