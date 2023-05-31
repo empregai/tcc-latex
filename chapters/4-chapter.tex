@@ -8,55 +8,61 @@
 \subsubsection{Lista de requisitos}
 Segue os requisitos do projeto
 % ----------------------------------------------------------
-\begin{quadro}[htb]
+\begin{table}[htb]
 	\centering
-	\caption{\label{Formatação do texto.}Requisitos funcionais}	
+	\caption{\label{Formatação do texto.}Requisitos funcionais}
 	\begin{tabular}{|l|p{11cm}|}
-		\hline
-		\textbf{Identificação}    & \textbf{Requisito}\\ \hline
-		RF01        			  & Manter usuário\\ \hline
-		RF02        			  & Realizar login\\ \hline
-		RF03         			  & Cadastro de anúncio\\ \hline
-		RF04        			  & Avaliação do profissional\\ \hline
-		RF05        			  & Histórico de serviços prestados\\ \hline
-		RF06        			  & Histórico de serviços contratados \\ \hline
-		RF07        			  & Candidatar no anúncio \\ \hline
-		RF08        			  & Candidatar no anúncio 
-		\\ \hline
+	\hline
+	\textbf{Identificação} & \textbf{Requisito}\\ \hline
+	RF01 & Manter usuário \\ \hline
+	RF02 & Realizar login \\ \hline
+	RF03 & Cadastro de anúncio \\ \hline
+	RF04 & Avaliação do profissional\\ \hline
+	RF05 & Histórico de serviços prestados \\ \hline
+	RF06 & Histórico de serviços contratados \\ \hline
+	RF07 & Candidatar no anúncio \\ \hline
+	RF08 & Concluir anúncio \\ \hline
 	\end{tabular}
 	\fonte{\textcite{Elaborado pelos autores(2023)}.}
-\end{quadro}
+\end{table}
 
-\begin{quadro}[htb]
+\begin{table}[htb]
 	\centering
-	\caption{\label{Formatação do texto.}Requisitos não funcionais}	
+	\caption{\label{Formatação do texto.}Requisitos não funcionais}
 	\begin{tabular}{|l|p{11cm}|}
-		\hline
-		\textbf{Identificação}    & \textbf{Requisito}\\ \hline
-		RNF01        			  & Banco de dados relacional(PostgreSQL)\\ \hline
-		RNF02        			  & Interface mobile em ReactJS Native\\ \hline
+	\hline
+	\textbf{Identificação}    & \textbf{Requisito}\\ \hline
+	RNF01        			  & Banco de dados relacional(PostgreSQL)\\ \hline
+	RNF02        			  & Interface mobile em ReactJS Native\\ \hline
 	\end{tabular}
 	\fonte{\textcite{Elaborado pelos autores(2023)}.}
-\end{quadro}
+\end{table}
 
 \subsubsection{ Lista de Regras de Negócio}
+Segue a tabela com as regras de negócio do sistema.
+\clearpage
+\begin{table}[htb]
+	\centering
+	\caption{\label{Formatação do texto.}Lista de Regras de Negócio}
+	\begin{tabular}{|l|p{8cm}|p{3cm}|}
+		\hline
+		\textbf{Identificação} & \textbf{Regras de Negócio} & \textbf{Requisito associado} \\ \hline
+		RN01 & Validação CPF válido e único. & RF1 \\ \hline
+		RN02 & RValidação de email válido e único. & RF02 \\ \hline
+		RN03 & O prestador de serviço NÃO poderá se candidatar para, realizar um serviço caso tenha um serviço marcado para a mesma data e hora. & RF07 \\ \hline
+		RN04 & O cliente só poderá selecionar um profissional, para realizar o serviço. & RF08 \\ \hline
+		RN05 & O cliente só poderá avaliar um profissional após a conclusão do serviço. & RF08, RF04 \\ \hline
+		RN06 & O prestador de serviços só poderá ver e se candidatar para serviços relacionados com o seu perfil  & RF07 \\ \hline
+		RN07 & O cliente não poderá fazer um anúncio com a data do passado  & RF03 \\ \hline
+		RN08 & Caso o anúncio tenha uma data de expiração ele não deverá aparecer em tela e o anunciante deverá ser notificado & RF03 \\ \hline
+	\end{tabular}
+	\fonte{\textcite{Elaborado pelos autores(2023)}.}
+\end{table}
 
-\begin{tabular}{|l|p{8cm}|p{3cm}|}
-	\hline
-	\textbf{Identificação} & \textbf{Regras de Negócio} & \textbf{Requisito associado} \\ \hline
-	RN01 & Validação CPF válido e único. & RF1 \\ \hline
-	RN02 & RValidação de email válido e único. & RF02 \\ \hline
-	RN03 & O prestador de serviço NÃO poderá se candidatar para, realizar um serviço caso tenha um serviço marcado para a mesma data e hora. & RF07 \\ \hline
-	RN04 & O cliente só poderá selecionar um profissional, para realizar o serviço. & RF08 \\ \hline
-	RN05 & O cliente só poderá avaliar um profissional após a conclusão do serviço. & RF08, RF04 \\ \hline
-	RN06 & O prestador de serviços só poderá ver e se candidatar para serviços relacionados com o seu perfil  & RF07 \\ \hline
-	RN07 & O cliente não poderá fazer um anúncio com a data do passado  & RF03 \\ \hline
-	RN08 & Caso o anúncio tenha uma data de expiração ele não deverá aparecer em tela e o anunciante deverá ser notificado & RF03 \\ \hline
-\end{tabular}
 
 \subsubsection{ Descrição dos requisistos}
 \clearpage
-\begin{quadro}[htb]
+\begin{table}[htb]
 	\centering
 	\caption{\label{Formatação do texto.}Descrição RF01}	
 	\begin{tabular}{|l|p{11cm}|}
@@ -76,7 +82,7 @@ Segue os requisitos do projeto
 			} \\ \hline
 	\end{tabular}
 	\fonte{\textcite{Elaborado pelos autores(2023)}.}
-\end{quadro}
+\end{table}
 
 \clearpage
 \begin{figure}[hbb]
@@ -93,7 +99,7 @@ Segue os requisitos do projeto
 \end{figure}
 
 \clearpage
-\begin{quadro}[htb]
+\begin{table}[htb]
 	\centering
 	\caption{\label{Formatação do texto.}Descrição RF02}	
 	\begin{tabular}{|l|p{11cm}|}
@@ -111,7 +117,7 @@ Segue os requisitos do projeto
 			}\\ \hline
 	\end{tabular}
 	\fonte{\textcite{Elaborado pelos autores(2023)}.}
-\end{quadro}
+\end{table}
 
 \clearpage
 \begin{figure}[htb]
@@ -123,7 +129,7 @@ Segue os requisitos do projeto
 \end{figure}
 
 \clearpage
-\begin{quadro}[htb]
+\begin{table}[htb]
 	\centering
 	\caption{\label{Formatação do texto.}Descrição RF03}	
 	\begin{tabular}{|l|p{11cm}|}
@@ -141,10 +147,10 @@ Segue os requisitos do projeto
 			} \\ \hline
 	\end{tabular}
 	\fonte{\textcite{Elaborado pelos autores(2023)}.}
-\end{quadro}
+\end{table}
 
 \clearpage
-\begin{quadro}[htb]
+\begin{table}[htb]
 	\centering
 	\caption{\label{Formatação do texto.}Descrição RF07}	
 	\begin{tabular}{|l|p{11cm}|}
@@ -164,10 +170,10 @@ Segue os requisitos do projeto
 			} \\ \hline
 	\end{tabular}
 	\fonte{\textcite{Elaborado pelos autores(2023)}.}
-\end{quadro}
+\end{table}
 
 \clearpage
-\begin{quadro}[htb]
+\begin{table}[htb]
 	\centering
 	\caption{\label{Formatação do texto.}Descrição RF08}	
 	\begin{tabular}{|l|p{11cm}|}
@@ -187,10 +193,10 @@ Segue os requisitos do projeto
 			} \\ \hline
 	\end{tabular}
 	\fonte{\textcite{Elaborado pelos autores(2023)}.}
-\end{quadro}
+\end{table}
 
 \clearpage
-\begin{quadro}[htb]
+\begin{table}[htb]
 	\centering
 	\caption{\label{Formatação do texto.}Descrição RF04}	
 	\begin{tabular}{|l|p{11cm}|}
@@ -208,10 +214,10 @@ Segue os requisitos do projeto
 			} \\ \hline
 	\end{tabular}
 	\fonte{\textcite{Elaborado pelos autores(2023)}.}
-\end{quadro}
+\end{table}
 
 \clearpage
-\begin{quadro}[htb]
+\begin{table}[htb]
 	\centering
 	\caption{\label{Formatação do texto.}Descrição RF05}	
 	\begin{tabular}{|l|p{11cm}|}
@@ -229,10 +235,10 @@ Segue os requisitos do projeto
 			} \\ \hline
 	\end{tabular}
 	\fonte{\textcite{Elaborado pelos autores(2023)}.}
-\end{quadro}
+\end{table}
 
 \clearpage
-\begin{quadro}[htb]
+\begin{table}[htb]
 	\centering
 	\caption{\label{Formatação do texto.}Descrição RF06}	
 	\begin{tabular}{|l|p{11cm}|}
@@ -250,11 +256,11 @@ Segue os requisitos do projeto
 			} \\ \hline
 	\end{tabular}
 	\fonte{\textcite{Elaborado pelos autores(2023)}.}
-\end{quadro}
+\end{table}
 
 
 \clearpage
-\begin{quadro}[htb]
+\begin{table}[htb]
 	\centering
 	\caption{\label{Formatação do texto.}Descrição RNF01}	
 	\begin{tabular}{|l|p{11cm}|}
@@ -274,10 +280,10 @@ Segue os requisitos do projeto
 			} \\ \hline
 	\end{tabular}
 	\fonte{\textcite{Elaborado pelos autores(2023)}.}
-\end{quadro}
+\end{table}
 
 \clearpage
-\begin{quadro}[htb]
+\begin{table}[htb]
 	\centering
 	\caption{\label{Formatação do texto.}Descrição RNF02}	
 	\begin{tabular}{|l|p{11cm}|}
@@ -294,4 +300,4 @@ Segue os requisitos do projeto
 			} \\ \hline
 	\end{tabular}
 	\fonte{\textcite{Elaborado pelos autores(2023)}.}
-\end{quadro}
+\end{table}
