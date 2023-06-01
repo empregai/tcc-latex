@@ -22,6 +22,7 @@ Segue os requisitos do projeto
 	RF06 & Histórico de serviços contratados \\ \hline
 	RF07 & Candidatar no anúncio \\ \hline
 	RF08 & Concluir anúncio \\ \hline
+	RF09 & Adicionar Contatos \\ \hline
 	\end{tabular}
 	\fonte{\textcite{Elaborado pelos autores(2023)}.}
 \end{table}
@@ -55,6 +56,17 @@ Segue a tabela com as regras de negócio do sistema.
 		RN06 & O prestador de serviços só poderá ver e se candidatar para serviços relacionados com o seu perfil  & RF07 \\ \hline
 		RN07 & O cliente não poderá fazer um anúncio com a data do passado  & RF03 \\ \hline
 		RN08 & Caso o anúncio tenha uma data de expiração ele não deverá aparecer em tela e o anunciante deverá ser notificado & RF03 \\ \hline
+		RN09 & Caso o anúncio tenha uma data de expiração ele não deverá aparecer em tela e o anunciante deverá ser notificado & RF03 \\ \hline
+		RN10 & O prestador de serviço NÃO poderá se candidatar para um anúncio que ele já se candidatou.  & RF07 \\ \hline
+		RN11 & O cliente NÃO poderá avaliar o prestador de serviço  mais de uma vez.  & RF04 \\ \hline
+		RN12 & O cliente só poderá avaliar o prestador de serviço a qual ele contratou.  & RF04 \\ \hline
+		RN13 & O cliente só poderá fazer um anúncio por tipo de serviço  & RF03 \\ \hline
+		RN14 & O sistema deve validar a precisão e a existência do CEP fornecido pelo cliente para garantir que o endereço esteja correto.  & RF01 \\ \hline
+		RN15 & As informações de contato do cliente deverão ser solicitadas pelo prestador de serviços na plataforma  &  \\ \hline
+		RN16 & O cliente só pode cancelar um serviço até um determinado prazo antes da data agendada. Após esse prazo, o cancelamento não é permitido.  & RF03 \\ \hline
+		RN17 &Os números de contatos tanto do prestador quanto do cliente devem ser validados
+		&  \\ \hline
+
 	\end{tabular}
 	\fonte{\textcite{Elaborado pelos autores(2023)}.}
 \end{table}
@@ -62,6 +74,7 @@ Segue a tabela com as regras de negócio do sistema.
 
 \subsubsection{ Descrição dos requisistos}
 \clearpage
+Segue na tabela abaixo a descrição e os critérios de aceitação do RF01
 \begin{table}[htb]
 	\centering
 	\caption{\label{Formatação do texto.}Descrição RF01}	
@@ -121,7 +134,9 @@ Segue a tabela com as regras de negócio do sistema.
 	\fonte{Elaborado pelos autores(2023)}
 	No quarto passo o usuário deverá informa uma senha.
 \end{figure}
+
 \clearpage
+Segue na tabela abaixo a descrição e os critérios de aceitação do RF02
 \begin{table}[htb]
 	\centering
 	\caption{\label{Formatação do texto.}Descrição RF02}	
@@ -152,6 +167,7 @@ Segue a tabela com as regras de negócio do sistema.
 \end{figure}
 
 \clearpage
+Segue na tabela abaixo a descrição e os critérios de aceitação do RF03
 \begin{table}[htb]
 	\centering
 	\caption{\label{Formatação do texto.}Descrição RF03}	
@@ -173,6 +189,7 @@ Segue a tabela com as regras de negócio do sistema.
 \end{table}
 
 \clearpage
+Segue na tabela abaixo a descrição e os critérios de aceitação do RF07
 \begin{table}[htb]
 	\centering
 	\caption{\label{Formatação do texto.}Descrição RF07}	
@@ -195,7 +212,76 @@ Segue a tabela com as regras de negócio do sistema.
 	\fonte{\textcite{Elaborado pelos autores(2023)}.}
 \end{table}
 
+
 \clearpage
+Segue na tabela abaixo a descrição e os critérios de aceitação do RF04
+
+\begin{table}[htb]
+	\centering
+	\caption{\label{Formatação do texto.}Descrição RF04}	
+	\begin{tabular}{|l|p{11cm}|}
+		\hline
+		\textbf{Incremento}    & Iteração 06\\ \hline
+		\textbf{Nome}    & Avaliação do profissional\\ \hline
+		\textbf{Tipo}    & Funcional\\ \hline
+		\multicolumn{2}{|c|}{Descrição}\\ \hline
+		\multicolumn{2}{|p{12cm}|}{
+			O sistema deve permitir que os clientes avaliem os prestadores de serviço após a realização do serviço. \newline
+			\newline Critérios de Aceitação: \newline
+			O sistema deve apresentar um campo de avaliação com uma escala numérica ou de estrelas e um campo para o cliente deixar um comentário sobre a qualidade do serviço prestado; \newline
+			\newline O sistema deve permitir que o cliente avalie apenas os prestadores de serviço que já foram contratados por ele; \newline
+			\newline O sistema deve disponibilizar as avaliações dos prestadores de serviço para que outros clientes possam consultar antes de contratar os serviços dos mesmos.
+			} \\ \hline
+	\end{tabular}
+	\fonte{\textcite{Elaborado pelos autores(2023)}.}
+\end{table}
+
+\clearpage
+Segue na tabela abaixo a descrição e os critérios de aceitação do RF05
+\begin{table}[htb]
+	\centering
+	\caption{\label{Formatação do texto.}Descrição RF05}	
+	\begin{tabular}{|l|p{11cm}|}
+		\hline
+		\textbf{Incremento}    & Iteração 07\\ \hline
+		\textbf{Nome}    & Histórico de serviços prestados\\ \hline
+		\textbf{Tipo}    & Funcional\\ \hline
+		\multicolumn{2}{|c|}{Descrição}\\ \hline
+		\multicolumn{2}{|p{12cm}|}{
+			O sistema deve permitir que os prestadores de serviço visualizem seu histórico de serviços prestados. \newline
+			\newline Critérios de Aceitação: \newline
+			O sistema deve exibir uma lista de todos os serviços prestados pelo prestador, com informações como o título do anúncio e a data de realização; \newline
+			\newline O sistema deve permitir que o cliente avalie apenas os prestadores de serviço que já foram contratados por ele; \newline
+			\newline O sistema deve disponibilizar as avaliações dos prestadores de serviço para que outros clientes possam consultar antes de contratar os serviços dos mesmos.
+			} \\ \hline
+	\end{tabular}
+	\fonte{\textcite{Elaborado pelos autores(2023)}.}
+\end{table}
+
+\clearpage
+Segue na tabela abaixo a descrição e os critérios de aceitação do RF06
+\begin{table}[htb]
+	\centering
+	\caption{\label{Formatação do texto.}Descrição RF06}	
+	\begin{tabular}{|l|p{11cm}|}
+		\hline
+		\textbf{Incremento}    & Iteração 07\\ \hline
+		\textbf{Nome}    & Histórico de serviços contratados\\ \hline
+		\textbf{Tipo}    & Funcional\\ \hline
+		\multicolumn{2}{|c|}{Descrição}\\ \hline
+		\multicolumn{2}{|p{12cm}|}{
+			O sistema deve permitir que o cliente tenha acesso ao histórico de serviços contratados por ele, incluindo informações como data, valor, nome do prestador de serviço e avaliação. \newline
+			\newline Critérios de Aceitação: \newline
+			O sistema deve apresentar uma lista dos serviços contratados pelo cliente; \newline
+            Cada serviço deve apresentar informações como data, nome do prestador de serviço e avaliação; \newline
+			\newline O histórico deve ser atualizado automaticamente após a conclusão do serviço;
+			} \\ \hline
+	\end{tabular}
+	\fonte{\textcite{Elaborado pelos autores(2023)}.}
+\end{table}
+
+\clearpage
+Segue na tabela abaixo a descrição e os critérios de aceitação do RF08
 \begin{table}[htb]
 	\centering
 	\caption{\label{Formatação do texto.}Descrição RF08}	
@@ -219,70 +305,33 @@ Segue a tabela com as regras de negócio do sistema.
 \end{table}
 
 \clearpage
+Segue na tabela abaixo a descrição e os critérios de aceitação do RF09
 \begin{table}[htb]
 	\centering
-	\caption{\label{Formatação do texto.}Descrição RF04}	
+	\caption{\label{Formatação do texto.}Descrição RF09}	
 	\begin{tabular}{|l|p{11cm}|}
 		\hline
 		\textbf{Incremento}    & Iteração 06\\ \hline
-		\textbf{Nome}    & Avaliação do profissional\\ \hline
+		\textbf{Nome}    & Adicionar Contatos\\ \hline
 		\textbf{Tipo}    & Funcional\\ \hline
 		\multicolumn{2}{|c|}{Descrição}\\ \hline
 		\multicolumn{2}{|p{12cm}|}{
-			O sistema deve permitir que os clientes avaliem os prestadores de serviço após a realização do serviço. \newline
+			O sistema deve permitir que os clientes adicionem outros clientes como contatos na plataforma. \newline
 			\newline Critérios de Aceitação: \newline
-			O sistema deve apresentar um campo de avaliação com uma escala numérica ou de estrelas e um campo para o cliente deixar um comentário sobre a qualidade do serviço prestado; \newline
-			\newline O sistema deve permitir que o cliente avalie apenas os prestadores de serviço que já foram contratados por ele; \newline
-			\newline O sistema deve disponibilizar as avaliações dos prestadores de serviço para que outros clientes possam consultar antes de contratar os serviços dos mesmos.
+			O sistema deve fornecer um recurso que permita aos clientes adicionar outros clientes como contatos; \newline
+            Os clientes devem ter a opção de enviar solicitações de conexão para outros clientes; \newline
+			Os clientes devem receber notificações quando receberem solicitações de conexão; \newline
+			Os clientes devem ter a capacidade de aceitar ou rejeitar solicitações de conexão.
+Após a conexão ser aceita, os clientes devem ter a capacidade de visualizar os contatos adicionados em sua lista de contatos
+; \newline
+Os clientes devem ter a opção de remover contatos da lista, caso desejem;
 			} \\ \hline
 	\end{tabular}
 	\fonte{\textcite{Elaborado pelos autores(2023)}.}
 \end{table}
 
 \clearpage
-\begin{table}[htb]
-	\centering
-	\caption{\label{Formatação do texto.}Descrição RF05}	
-	\begin{tabular}{|l|p{11cm}|}
-		\hline
-		\textbf{Incremento}    & Iteração 07\\ \hline
-		\textbf{Nome}    & Histórico de serviços prestados\\ \hline
-		\textbf{Tipo}    & Funcional\\ \hline
-		\multicolumn{2}{|c|}{Descrição}\\ \hline
-		\multicolumn{2}{|p{12cm}|}{
-			O sistema deve permitir que os prestadores de serviço visualizem seu histórico de serviços prestados. \newline
-			\newline Critérios de Aceitação: \newline
-			O sistema deve exibir uma lista de todos os serviços prestados pelo prestador, com informações como o título do anúncio e a data de realização; \newline
-			\newline O sistema deve permitir que o cliente avalie apenas os prestadores de serviço que já foram contratados por ele; \newline
-			\newline O sistema deve disponibilizar as avaliações dos prestadores de serviço para que outros clientes possam consultar antes de contratar os serviços dos mesmos.
-			} \\ \hline
-	\end{tabular}
-	\fonte{\textcite{Elaborado pelos autores(2023)}.}
-\end{table}
-
-\clearpage
-\begin{table}[htb]
-	\centering
-	\caption{\label{Formatação do texto.}Descrição RF06}	
-	\begin{tabular}{|l|p{11cm}|}
-		\hline
-		\textbf{Incremento}    & Iteração 07\\ \hline
-		\textbf{Nome}    & Histórico de serviços contratados\\ \hline
-		\textbf{Tipo}    & Funcional\\ \hline
-		\multicolumn{2}{|c|}{Descrição}\\ \hline
-		\multicolumn{2}{|p{12cm}|}{
-			O sistema deve permitir que o cliente tenha acesso ao histórico de serviços contratados por ele, incluindo informações como data, valor, nome do prestador de serviço e avaliação. \newline
-			\newline Critérios de Aceitação: \newline
-			O sistema deve apresentar uma lista dos serviços contratados pelo cliente; \newline
-            Cada serviço deve apresentar informações como data, nome do prestador de serviço e avaliação; \newline
-			\newline O histórico deve ser atualizado automaticamente após a conclusão do serviço;
-			} \\ \hline
-	\end{tabular}
-	\fonte{\textcite{Elaborado pelos autores(2023)}.}
-\end{table}
-
-
-\clearpage
+Segue na tabela abaixo a descrição e os critérios de aceitação do RNF01
 \begin{table}[htb]
 	\centering
 	\caption{\label{Formatação do texto.}Descrição RNF01}	
@@ -306,6 +355,7 @@ Segue a tabela com as regras de negócio do sistema.
 \end{table}
 
 \clearpage
+Segue na tabela abaixo a descrição e os critérios de aceitação do RNF02
 \begin{table}[htb]
 	\centering
 	\caption{\label{Formatação do texto.}Descrição RNF02}	
@@ -324,3 +374,4 @@ Segue a tabela com as regras de negócio do sistema.
 	\end{tabular}
 	\fonte{\textcite{Elaborado pelos autores(2023)}.}
 \end{table}
+
