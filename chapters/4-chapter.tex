@@ -1,83 +1,81 @@
 % ----------------------------------------------------------
-\chapter{PROCESSO DE DESENVOLVIMENTO DE SOFTWARE}\label{cap:desenvolvimento}
-% ----------------------------------------------------------
-\textcite{Pressman2016} afirma que os modelos tradicionais de processos de desenvolvimento se concentram em estruturar e ordenar o desenvolvimento de 
-software. Nesses modelos, as atividades e tarefas ocorrem sequencialmente, seguindo diretrizes de progresso bem definidas. O autor também define algumas 
-atividades genéricas para os processos de desenvolvimento de software, que são::
-\begin{itemize}[label=$\bullet$]
-	\item Comunicação: Levantamento de requisitos.
-	\item Planejamento: Estimativas, cronograma, acompanhamento.
-	\item Modelagem: Análise, projeto.
-	\item Construção: Código, testes.
-	\item Entrega/Disponibilização: Entrega, feedback.
-	\end{itemize}
-	De acordo com \textcite{Pressman2016}, o modelo incremental combina os fluxos de processo linear e paralelo dos elementos. Esse modelo é aplicado por
-	meio de sequências lineares escalonadas à medida que o tempo avança. Cada sequência linear produz incrementos entregáveis do software. \newline
-	\textcite{Pressman2016} destaca que, ao utilizar um modelo incremental, o primeiro incremento frequentemente é um produto essencial, fundamental 
-	para atender às necessidades iniciais do cliente. Esse produto essencial é utilizado pelo cliente ou passa por uma avaliação detalhada para obter feedback valioso. 
-	Com base no uso e/ou na avaliação, é desenvolvido um planejamento para o próximo incremento, levando em consideração as modificações necessárias para melhor adequar o 
-	produto às necessidades do cliente, bem como a entrega de recursos e funcionalidades adicionais.
-	\newline Dessa forma, o projeto em questão tem como objetivo utilizar o processo incremental para o desenvolvimento do software Empregai, seguindo validações de progresso quinzenais.
-% ----------------------------------------------------------
 
 % ----------------------------------------------------------
-\chapter{REQUISITOS}
+\chapter{Desenvolvimento do Trabalho}
+
 % ----------------------------------------------------------
-Deve-se inserir texto entre as seções.
-% ----------------------------------------------------------
-\subsection{Lista de requisitos}
+\subsection{Requisitos}
+\subsubsection{Lista de requisitos}
 Segue os requisitos do projeto
 % ----------------------------------------------------------
-\begin{quadro}[htb]
+\begin{table}[htb]
 	\centering
-	\caption{\label{Formatação do texto.}Requisitos funcionais}	
+	\caption{\label{Formatação do texto.}Requisitos funcionais}
 	\begin{tabular}{|l|p{11cm}|}
-		\hline
-		\textbf{Identificação}    & \textbf{Requisito}\\ \hline
-		RF01        			  & Manter usuário\\ \hline
-		RF02        			  & Realizar login\\ \hline
-		RF03         			  & Cadastro de anúncio\\ \hline
-		RF04        			  & Avaliação do profissional\\ \hline
-		RF05        			  & Histórico de serviços prestados\\ \hline
-		RF06        			  & Histórico de serviços contratados \\ \hline
-		RF07        			  & Candidatar no anúncio \\ \hline
-		RF08        			  & Candidatar no anúncio 
-		\\ \hline
-	\end{tabular}
-	\fonte{\textcite{Elaborado pelos autores(2023)}.}
-\end{quadro}
-
-\begin{quadro}[htb]
-	\centering
-	\caption{\label{Formatação do texto.}Requisitos não funcionais}	
-	\begin{tabular}{|l|p{11cm}|}
-		\hline
-		\textbf{Identificação}    & \textbf{Requisito}\\ \hline
-		RNF01        			  & Banco de dados relacional(PostgreSQL)\\ \hline
-		RNF02        			  & Interface mobile em ReactJS Native\\ \hline
-	\end{tabular}
-	\fonte{\textcite{Elaborado pelos autores(2023)}.}
-\end{quadro}
-
-\subsection{ Lista de Regras de Negócio}
-
-\begin{tabular}{|l|p{8cm}|p{3cm}|}
 	\hline
-	\textbf{Identificação} & \textbf{Regras de Negócio} & \textbf{Requisito associado} \\ \hline
-	RN01 & Validação CPF válido e único. & RF1 \\ \hline
-	RN02 & RValidação de email válido e único. & RF02 \\ \hline
-	RN03 & O prestador de serviço NÃO poderá se candidatar para, realizar um serviço caso tenha um serviço marcado para a mesma data e hora. & RF07 \\ \hline
-	RN04 & O cliente só poderá selecionar um profissional, para realizar o serviço. & RF08 \\ \hline
-	RN05 & O cliente só poderá avaliar um profissional após a conclusão do serviço. & RF08, RF04 \\ \hline
-	RN06 & O prestador de serviços só poderá ver e se candidatar para serviços relacionados com o seu perfil  & RF07 \\ \hline
-	RN07 & O cliente não poderá fazer um anúncio com a data do passado  & RF03 \\ \hline
-	RN08 & Caso o anúncio tenha uma data de expiração ele não deverá aparecer em tela e o anunciante deverá ser notificado & RF03 \\ \hline
-\end{tabular}
+	\textbf{Identificação} & \textbf{Requisito}\\ \hline
+	RF01 & Manter usuário \\ \hline
+	RF02 & Realizar login \\ \hline
+	RF03 & Cadastro de anúncio \\ \hline
+	RF04 & Avaliação do profissional\\ \hline
+	RF05 & Histórico de serviços prestados \\ \hline
+	RF06 & Histórico de serviços contratados \\ \hline
+	RF07 & Candidatar no anúncio \\ \hline
+	RF08 & Concluir anúncio \\ \hline
+	RF09 & Adicionar Contatos \\ \hline
+	\end{tabular}
+	\fonte{\textcite{Elaborado pelos autores(2023)}.}
+\end{table}
+
+\begin{table}[htb]
+	\centering
+	\caption{\label{Formatação do texto.}Requisitos não funcionais}
+	\begin{tabular}{|l|p{11cm}|}
+	\hline
+	\textbf{Identificação}    & \textbf{Requisito}\\ \hline
+	RNF01        			  & Banco de dados relacional(PostgreSQL)\\ \hline
+	RNF02        			  & Interface mobile em ReactJS Native\\ \hline
+	\end{tabular}
+	\fonte{\textcite{Elaborado pelos autores(2023)}.}
+\end{table}
+
+\subsubsection{ Lista de Regras de Negócio}
+Segue a tabela com as regras de negócio do sistema.
+\clearpage
+\begin{table}[htb]
+	\centering
+	\caption{\label{Formatação do texto.}Lista de Regras de Negócio}
+	\begin{tabular}{|l|p{8cm}|p{3cm}|}
+		\hline
+		\textbf{Identificação} & \textbf{Regras de Negócio} & \textbf{Requisito associado} \\ \hline
+		RN01 & Validação CPF válido e único. & RF1 \\ \hline
+		RN02 & RValidação de email válido e único. & RF02 \\ \hline
+		RN03 & O prestador de serviço NÃO poderá se candidatar para, realizar um serviço caso tenha um serviço marcado para a mesma data e hora. & RF07 \\ \hline
+		RN04 & O cliente só poderá selecionar um profissional, para realizar o serviço. & RF08 \\ \hline
+		RN05 & O cliente só poderá avaliar um profissional após a conclusão do serviço. & RF08, RF04 \\ \hline
+		RN06 & O prestador de serviços só poderá ver e se candidatar para serviços relacionados com o seu perfil  & RF07 \\ \hline
+		RN07 & O cliente não poderá fazer um anúncio com a data do passado  & RF03 \\ \hline
+		RN08 & Caso o anúncio tenha uma data de expiração ele não deverá aparecer em tela e o anunciante deverá ser notificado & RF03 \\ \hline
+		RN09 & Caso o anúncio tenha uma data de expiração ele não deverá aparecer em tela e o anunciante deverá ser notificado & RF03 \\ \hline
+		RN10 & O prestador de serviço NÃO poderá se candidatar para um anúncio que ele já se candidatou.  & RF07 \\ \hline
+		RN11 & O cliente NÃO poderá avaliar o prestador de serviço  mais de uma vez.  & RF04 \\ \hline
+		RN12 & O cliente só poderá avaliar o prestador de serviço a qual ele contratou.  & RF04 \\ \hline
+		RN13 & O cliente só poderá fazer um anúncio por tipo de serviço  & RF03 \\ \hline
+		RN14 & O sistema deve validar a precisão e a existência do CEP fornecido pelo cliente para garantir que o endereço esteja correto.  & RF01 \\ \hline
+		RN15 & As informações de contato do cliente deverão ser solicitadas pelo prestador de serviços na plataforma  &  \\ \hline
+		RN16 & O cliente só pode cancelar um serviço até um determinado prazo antes da data agendada. Após esse prazo, o cancelamento não é permitido.  & RF03 \\ \hline
+		RN17 &Os números de contatos tanto do prestador quanto do cliente devem ser validados
+		&  \\ \hline
+
+	\end{tabular}
+	\fonte{\textcite{Elaborado pelos autores(2023)}.}
+\end{table}
 
 
-\subsection{Descrição dos requisitos funcionais }
-
-\begin{quadro}[htb]
+\subsubsection{ Descrição dos requisistos}
+\clearpage
+Segue na tabela abaixo a descrição e os critérios de aceitação do RF01
+\begin{table}[htb]
 	\centering
 	\caption{\label{Formatação do texto.}Descrição RF01}	
 	\begin{tabular}{|l|p{11cm}|}
@@ -90,34 +88,56 @@ Segue os requisitos do projeto
 			O sistema deve permitir o cadastro de usuários e o gerenciamento de suas informações. \newline
 			\newline Critérios de Aceitação: \newline
 			O sistema deve permitir o cadastro de novos clientes com as informações básicas (nome, e-mail, senha, CPF, cidade, endereço e telefone); \newline
-			\newline O sistema deve permitir o cadastro de novos prestadores com as informações básicas (nome, e-mail, senha, CPF, ou CNPJ, cidade, categoria do serviços prestados e telefone); \newline
-			\newline O sistema deve permitir a atualização das informações do usuário, incluindo nome, e-mail e senha; \newline
+			\newline O sistema deve permitir o cadastro de novos prestadores com as informações básicas (nome, e-mail, senha, CPF, ou CNPJ, cidade, categoria do serviço e telefone); \newline
+			\newline O sistema deve permitir a atualização das informações do usuário, incluindo nome e senha; \newline
 			\newline O sistema deve permitir a exclusão do usuário; \newline
 			O sistema deve garantir a segurança das informações dos usuários, armazenando as senhas de forma criptografada.
 			} \\ \hline
 	\end{tabular}
 	\fonte{\textcite{Elaborado pelos autores(2023)}.}
-\end{quadro}
+\end{table}
 
-
-
-
-\begin{figure}[htb]
-	\caption{Tela de cadastro}
+\subsubsection{ Prototipação do caso de uso Manter Usuário}
+	Segue a baixo a prototipação do requisito RF01.
+\begin{figure}[hbb]
+	\caption{Tela de cadastro - Passo 1}
 	\begin{center}
 		\includegraphics[width=0.3\textwidth]{images/Cadastro-1.png}
+	\end{center}
+	\fonte{Elaborado pelos autores(2023)}
+	No primeiro passo o usuário deverá informa seu nome e o sobrenome
+\end{figure}
+
+\begin{figure}[hbb]
+	\caption{Tela de cadastro - Passo 2}
+	\begin{center}
 		\includegraphics[width=0.3\textwidth]{images/Cadastro-2.png}
-		\includegraphics[width=0.3\textwidth]{images/Cadastro-3.png}
-		
+	\end{center}
+	\fonte{Elaborado pelos autores(2023)}
+	No segundo passo o usuário deverá informa a cidade e o endereço
+\end{figure}
+
+\begin{figure}[hbb]
+	\caption{Tela de cadastro - Passo 3}
+	\begin{center}
 		\includegraphics[width=0.3\textwidth]{images/Cadastro-4.png}
+	\end{center}
+	\fonte{Elaborado pelos autores(2023)}
+	No terceiro passo o usuário deverá informa seu email e o CPF
+\end{figure}
+
+\begin{figure}[hbb]
+	\caption{Tela de cadastro - Passo 4}
+	\begin{center}
 		\includegraphics[width=0.3\textwidth]{images/Cadastro-5.png}
 	\end{center}
 	\fonte{Elaborado pelos autores(2023)}
+	No quarto passo o usuário deverá informa uma senha.
 \end{figure}
 
-
-
-\begin{quadro}[htb]
+\clearpage
+Segue na tabela abaixo a descrição e os critérios de aceitação do RF02
+\begin{table}[htb]
 	\centering
 	\caption{\label{Formatação do texto.}Descrição RF02}	
 	\begin{tabular}{|l|p{11cm}|}
@@ -134,10 +154,12 @@ Segue os requisitos do projeto
 			\newline O sistema deve apresentar uma mensagem de erro caso as informações de login estejam incorretas;
 			}\\ \hline
 	\end{tabular}
-	\fonte{\textcite{Elaborado pelos autores(2023)}.}
-\end{quadro}
+	\fonte{Elaborado pelos autores(2023)}
+\end{table}
 
+\clearpage
 \begin{figure}[htb]
+	Nessa tela o usuário irá colocar as informações para ter acesso ao sistema.
 	\caption{Tela de login}
 	\begin{center}
 		\includegraphics[width=0.3\textwidth]{images/RF02.png}
@@ -145,7 +167,9 @@ Segue os requisitos do projeto
 	\fonte{Elaborado pelos autores(2023)}
 \end{figure}
 
-\begin{quadro}[htb]
+\clearpage
+Segue na tabela abaixo a descrição e os critérios de aceitação do RF03
+\begin{table}[htb]
 	\centering
 	\caption{\label{Formatação do texto.}Descrição RF03}	
 	\begin{tabular}{|l|p{11cm}|}
@@ -157,15 +181,17 @@ Segue os requisitos do projeto
 		\multicolumn{2}{|p{12cm}|}{
 			O sistema deve permitir que os clientes cadastrem seus anúncios de serviços. \newline
 			\newline Critérios de Aceitação: \newline
-			O sistema deve apresentar um formulário para o cadastro de anúncio, contendo informações como título, descrição, categoria eu localização; \newline
+			O sistema deve apresentar um formulário para o cadastro de anúncio, contendo informações como título, descrição, categoria e localização; \newline
 			\newline O sistema deve permitir que o cliente edite e exclua seus anúncios;\newline
 			\newline O sistema deve validar as informações inseridas pelo cliente, garantindo que o anúncio contenha informações suficientes e válidas para ser publicado.
 			} \\ \hline
 	\end{tabular}
-	\fonte{\textcite{Elaborado pelos autores(2023)}.}
-\end{quadro}
+	\fonte{Elaborado pelos autores(2023).}
+\end{table}
 
-\begin{quadro}[htb]
+\clearpage
+Segue na tabela abaixo a descrição e os critérios de aceitação do RF07
+\begin{table}[htb]
 	\centering
 	\caption{\label{Formatação do texto.}Descrição RF07}	
 	\begin{tabular}{|l|p{11cm}|}
@@ -184,10 +210,83 @@ Segue os requisitos do projeto
 			O cliente deve ser capaz de selecionar e contatar o prestador de serviços escolhido para o anúncio.
 			} \\ \hline
 	\end{tabular}
-	\fonte{\textcite{Elaborado pelos autores(2023)}.}
-\end{quadro}
+	\fonte{Elaborado pelos autores(2023).}
+\end{table}
 
-\begin{quadro}[htb]
+
+\clearpage
+Segue na tabela abaixo a descrição e os critérios de aceitação do RF04
+
+\begin{table}[htb]
+	\centering
+	\caption{\label{Formatação do texto.}Descrição RF04}	
+	\begin{tabular}{|l|p{11cm}|}
+		\hline
+		\textbf{Incremento}    & Iteração 06\\ \hline
+		\textbf{Nome}    & Avaliação do profissional\\ \hline
+		\textbf{Tipo}    & Funcional\\ \hline
+		\multicolumn{2}{|c|}{Descrição}\\ \hline
+		\multicolumn{2}{|p{12cm}|}{
+			O sistema deve permitir que os clientes avaliem os prestadores de serviço após a realização do serviço. \newline
+			\newline Critérios de Aceitação: \newline
+			O sistema deve apresentar um campo de avaliação com uma escala numérica ou de estrelas e um campo para o cliente deixar um comentário sobre a qualidade do serviço prestado; \newline
+			\newline O sistema deve permitir que o cliente avalie apenas os prestadores de serviço que já foram contratados por ele; \newline
+			\newline O sistema deve disponibilizar as avaliações dos prestadores de serviço para que outros clientes possam consultar antes de contratar os serviços dos mesmos; \newline
+			\newline O sistema deve destacar as avaliações dos contatos dos clientes ao visualizar a avaliação de um prestador de serviço; \newline
+			\newline As avaliações dos contatos devem ser identificadas de forma clara e visível para os clientes; \newline
+			\newline Os clientes devem ter a opção de filtrar ou ordenar as avaliações, priorizando as avaliações dos contatos. \newline
+			} \\ \hline
+	\end{tabular}
+	\fonte{Elaborado pelos autores(2023).}
+\end{table}
+
+\clearpage
+Segue na tabela abaixo a descrição e os critérios de aceitação do RF05
+\begin{table}[htb]
+	\centering
+	\caption{\label{Formatação do texto.}Descrição RF05}	
+	\begin{tabular}{|l|p{11cm}|}
+		\hline
+		\textbf{Incremento}    & Iteração 07\\ \hline
+		\textbf{Nome}    & Histórico de serviços prestados\\ \hline
+		\textbf{Tipo}    & Funcional\\ \hline
+		\multicolumn{2}{|c|}{Descrição}\\ \hline
+		\multicolumn{2}{|p{12cm}|}{
+			O sistema deve permitir que os prestadores de serviço visualizem seu histórico de serviços prestados. \newline
+			\newline Critérios de Aceitação: \newline
+			O sistema deve exibir uma lista de todos os serviços prestados pelo prestador, com informações como o título do anúncio e a data de realização; \newline
+			\newline O sistema deve permitir que o cliente avalie apenas os prestadores de serviço que já foram contratados por ele; \newline
+			\newline O sistema deve disponibilizar as avaliações dos prestadores de serviço para que outros clientes possam consultar antes de contratar os serviços dos mesmos.
+			} \\ \hline
+	\end{tabular}
+	\fonte{Elaborado pelos autores(2023).}
+\end{table}
+
+\clearpage
+Segue na tabela abaixo a descrição e os critérios de aceitação do RF06
+\begin{table}[htb]
+	\centering
+	\caption{\label{Formatação do texto.}Descrição RF06}	
+	\begin{tabular}{|l|p{11cm}|}
+		\hline
+		\textbf{Incremento}    & Iteração 07\\ \hline
+		\textbf{Nome}    & Histórico de serviços contratados\\ \hline
+		\textbf{Tipo}    & Funcional\\ \hline
+		\multicolumn{2}{|c|}{Descrição}\\ \hline
+		\multicolumn{2}{|p{12cm}|}{
+			O sistema deve permitir que o cliente tenha acesso ao histórico de serviços contratados por ele, incluindo informações como data, valor, nome do prestador de serviço e avaliação. \newline
+			\newline Critérios de Aceitação: \newline
+			O sistema deve apresentar uma lista dos serviços contratados pelo cliente; \newline
+            Cada serviço deve apresentar informações como data, nome do prestador de serviço e avaliação; \newline
+			\newline O histórico deve ser atualizado automaticamente após a conclusão do serviço;
+			} \\ \hline
+	\end{tabular}
+	\fonte{Elaborado pelos autores(2023).}
+\end{table}
+
+\clearpage
+Segue na tabela abaixo a descrição e os critérios de aceitação do RF08
+\begin{table}[htb]
 	\centering
 	\caption{\label{Formatação do texto.}Descrição RF08}	
 	\begin{tabular}{|l|p{11cm}|}
@@ -206,73 +305,38 @@ Segue os requisitos do projeto
 			O sistema deve permitir que o cliente avalie o prestador de serviços após a conclusão do trabalho.
 			} \\ \hline
 	\end{tabular}
-	\fonte{\textcite{Elaborado pelos autores(2023)}.}
-\end{quadro}
+	\fonte{Elaborado pelos autores(2023).}
+\end{table}
 
-\begin{quadro}[htb]
+\clearpage
+Segue na tabela abaixo a descrição e os critérios de aceitação do RF09
+\begin{table}[htb]
 	\centering
-	\caption{\label{Formatação do texto.}Descrição RF04}	
+	\caption{\label{Formatação do texto.}Descrição RF09}	
 	\begin{tabular}{|l|p{11cm}|}
 		\hline
 		\textbf{Incremento}    & Iteração 06\\ \hline
-		\textbf{Nome}    & Avaliação do profissional\\ \hline
+		\textbf{Nome}    & Adicionar Contatos\\ \hline
 		\textbf{Tipo}    & Funcional\\ \hline
 		\multicolumn{2}{|c|}{Descrição}\\ \hline
 		\multicolumn{2}{|p{12cm}|}{
-			O sistema deve permitir que os clientes avaliem os prestadores de serviço após a realização do serviço. \newline
+			O sistema deve permitir que os clientes adicionem outros clientes como contatos na plataforma. \newline
 			\newline Critérios de Aceitação: \newline
-			O sistema deve apresentar um campo de avaliação com uma escala numérica ou de estrelas e um campo para o cliente deixar um comentário sobre a qualidade do serviço prestado; \newline
-			\newline O sistema deve permitir que o cliente avalie apenas os prestadores de serviço que já foram contratados por ele; \newline
-			\newline O sistema deve disponibilizar as avaliações dos prestadores de serviço para que outros clientes possam consultar antes de contratar os serviços dos mesmos.
+			O sistema deve fornecer um recurso que permita aos clientes adicionar outros clientes como contatos; \newline
+            Os clientes devem ter a opção de enviar solicitações de conexão para outros clientes; \newline
+			Os clientes devem receber notificações quando receberem solicitações de conexão; \newline
+			Os clientes devem ter a capacidade de aceitar ou rejeitar solicitações de conexão.
+Após a conexão ser aceita, os clientes devem ter a capacidade de visualizar os contatos adicionados em sua lista de contatos
+; \newline
+Os clientes devem ter a opção de remover contatos da lista, caso desejem;
 			} \\ \hline
 	\end{tabular}
-	\fonte{\textcite{Elaborado pelos autores(2023)}.}
-\end{quadro}
+	\fonte{Elaborado pelos autores(2023).}
+\end{table}
 
-\begin{quadro}[htb]
-	\centering
-	\caption{\label{Formatação do texto.}Descrição RF05}	
-	\begin{tabular}{|l|p{11cm}|}
-		\hline
-		\textbf{Incremento}    & Iteração 07\\ \hline
-		\textbf{Nome}    & Histórico de serviços prestados\\ \hline
-		\textbf{Tipo}    & Funcional\\ \hline
-		\multicolumn{2}{|c|}{Descrição}\\ \hline
-		\multicolumn{2}{|p{12cm}|}{
-			O sistema deve permitir que os prestadores de serviço visualizem seu histórico de serviços prestados. \newline
-			\newline Critérios de Aceitação: \newline
-			O sistema deve exibir uma lista de todos os serviços prestados pelo prestador, com informações como o título do anúncio e a data de realização; \newline
-			\newline O sistema deve permitir que o cliente avalie apenas os prestadores de serviço que já foram contratados por ele; \newline
-			\newline O sistema deve disponibilizar as avaliações dos prestadores de serviço para que outros clientes possam consultar antes de contratar os serviços dos mesmos.
-			} \\ \hline
-	\end{tabular}
-	\fonte{\textcite{Elaborado pelos autores(2023)}.}
-\end{quadro}
-
-\begin{quadro}[htb]
-	\centering
-	\caption{\label{Formatação do texto.}Descrição RF06}	
-	\begin{tabular}{|l|p{11cm}|}
-		\hline
-		\textbf{Incremento}    & Iteração 07\\ \hline
-		\textbf{Nome}    & Histórico de serviços contratados\\ \hline
-		\textbf{Tipo}    & Funcional\\ \hline
-		\multicolumn{2}{|c|}{Descrição}\\ \hline
-		\multicolumn{2}{|p{12cm}|}{
-			O sistema deve permitir que o cliente tenha acesso ao histórico de serviços contratados por ele, incluindo informações como data, valor, nome do prestador de serviço e avaliação. \newline
-			\newline Critérios de Aceitação: \newline
-			O sistema deve apresentar uma lista dos serviços contratados pelo cliente; \newline
-            Cada serviço deve apresentar informações como data, nome do prestador de serviço e avaliação; \newline
-			\newline O histórico deve ser atualizado automaticamente após a conclusão do serviço;
-			} \\ \hline
-	\end{tabular}
-	\fonte{\textcite{Elaborado pelos autores(2023)}.}
-\end{quadro}
-
-
-\subsection{Descrição dos requisitos não funcionais }
-
-\begin{quadro}[htb]
+\clearpage
+Segue na tabela abaixo a descrição e os critérios de aceitação do RNF01
+\begin{table}[htb]
 	\centering
 	\caption{\label{Formatação do texto.}Descrição RNF01}	
 	\begin{tabular}{|l|p{11cm}|}
@@ -291,10 +355,12 @@ Segue os requisitos do projeto
 			O banco de dados deve ser capaz de suportar um grande volume de dados e garantir a disponibilidade do sistema.
 			} \\ \hline
 	\end{tabular}
-	\fonte{\textcite{Elaborado pelos autores(2023)}.}
-\end{quadro}
+	\fonte{Elaborado pelos autores(2023).}
+\end{table}
 
-\begin{quadro}[htb]
+\clearpage
+Segue na tabela abaixo a descrição e os critérios de aceitação do RNF02
+\begin{table}[htb]
 	\centering
 	\caption{\label{Formatação do texto.}Descrição RNF02}	
 	\begin{tabular}{|l|p{11cm}|}
@@ -310,5 +376,6 @@ Segue os requisitos do projeto
 			\newline A interface deve ser desenvolvida de acordo com as diretrizes da plataforma para garantir compatibilidade e desempenho.
 			} \\ \hline
 	\end{tabular}
-	\fonte{\textcite{Elaborado pelos autores(2023)}.}
-\end{quadro}
+	\fonte{Elaborado pelos autores(2023).}
+\end{table}
+
