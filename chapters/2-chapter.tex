@@ -35,17 +35,19 @@ Atualmente, a contratação de serviços passou por uma transformação signific
 % É importante ressaltar que, embora essas práticas tradicionais ainda existam em algumas áreas e localidades, a tecnologia e a digitalização transformaram significativamente a maneira como a contratação de serviços é realizada atualmente, proporcionando maior conveniência, alcance global e acesso a informações relevantes.
 
 
-\subsection{GetNinjas}
-No momento, a GetNinjas é a plataforma com maior destaque, pois possui uma grande variedade de profissionais de diversas áreas diferentes.
-O aplicativo está disponível tanto para Android quanto para iOS. O sistema é dividido em dois aplicativos, um para o cliente e outro para o
-prestador de serviços. A forma de negociação entre o cliente e o prestador acontece fora da plataforma, onde o prestador deve entrar em contato com as informações disponibilizadas pelo cliente. No entanto, esse modelo pode estar gerando alguns gargalos, pois dificulta a comunicação entre as partes. Vale ressaltar que a plataforma não gerencia o processo de pagamento entre o cliente e o prestador. Na verdade, o prestador compra "moedas" no aplicativo e, com essas "moedas", ele pode ter acesso aos contatos de quem está anunciando.
-\subsection{99freelas}
-A 99freelas é uma plataforma estabelecida e reconhecida que atende principalmente profissionais da área de tecnologia, embora também abranja
-outras áreas. Ela oferece uma maneira conveniente para os freelancers encontrarem projetos adequados às suas habilidades e interesses.
-Como intermediadora entre o prestador de serviço e o cliente, a 99freelas desempenha um papel importante na facilitação das transações.
-Uma das principais vantagens da plataforma é a gestão dos pagamentos, o que proporciona confiabilidade tanto para o prestador de serviço 
-quanto para o cliente. A 99freelas geralmente cuida da forma de pagamento, garantindo que o profissional seja remunerado adequadamente e 
-que o cliente tenha segurança na transação financeira.
+\subsection{Sistemas similares}
+A GetNinjas é uma plataforma destacada que oferece uma ampla variedade de profissionais de diversas
+áreas. Disponível para Android e iOS, possui dois aplicativos separados para clientes e 
+prestadores de serviços. No entanto, a negociação ocorre fora da plataforma, o que pode gerar 
+dificuldades na comunicação. A plataforma não gerencia o processo de pagamento, em vez disso, os
+prestadores compram "moedas" para acessar os contatos dos anunciantes.
+
+A 99freelas é uma plataforma estabelecida e reconhecida que atende principalmente profissionais de 
+tecnologia, mas também outras áreas. Ela facilita a busca de projetos adequados para freelancers,
+desempenhando um papel importante como intermediadora. A gestão dos pagamentos é uma vantagem 
+significativa, proporcionando confiabilidade tanto para o prestador de serviço quanto para o 
+cliente. A 99freelas cuida da forma de pagamento, garantindo uma remuneração adequada para o 
+profissional e segurança na transação financeira para o cliente.
 
 \begin{table}[htb]
     \centering
@@ -97,7 +99,9 @@ evitando a necessidade de desenvolvimento separado usando as linguagens nativas 
 Outro fator determinante na escolha do React Native como framework é a sua curva de aprendizado acessível. Devido à ampla familiaridade e popularidade da linguagem 
 JavaScript no mundo do desenvolvimento, a adoção do React Native é evidente (Figura 1), destacando sua força e importância no mercado.
 
-\clearpage
+
+
+
 \begin{figure}[htb]
 	\caption{\label{fig:Fig_1}Linguagens mais utilizadas Fonte: \cite{Softermii}}
 	\begin{center}
@@ -105,13 +109,15 @@ JavaScript no mundo do desenvolvimento, a adoção do React Native é evidente (
 	\end{center}
 \end{figure}
 % ----------------------------------------------------------
-
+\clearpage
 \subsection{Expo}
-O Expo é uma plataforma que simplifica o desenvolvimento de aplicativos móveis usando JavaScript e React Native. Com recursos nativos do dispositivo acessíveis e facilitando a colaboração e distribuição de aplicativos, o Expo oferece uma solução abrangente para criar aplicativos móveis.
+O Expo é uma plataforma que simplifica o desenvolvimento de aplicativos móveis utilizando JavaScript e React Native, proporcionando uma experiência aprimorada na criação de software. Ele oferece recursos nativos do dispositivo, facilita a colaboração e distribuição de aplicativos, tornando-se uma solução abrangente para o desenvolvimento de aplicativos móveis.
 
-Segundo (\textcite{Hugo}) o uso do Expo proporciona uma camada de abstração superior ao React Native, resultando em uma experiência aprimorada no desenvolvimento de software. Com o aumento do 
-número de usuários de smartphones, especialmente nas plataformas Android e iOS, a necessidade de criar aplicativos para ambas as plataformas se tornou cada vez mais 
-evidente. Nesse contexto, o Expo oferece uma vantagem no desenvolvimento híbrido, simplificando o processo de criação de aplicativos multiplataforma.
+Uma das vantagens do Expo é a possibilidade de executar o aplicativo em qualquer aparelho, seja Android ou iOS. Isso é possível graças ao aplicativo "Expo Client", disponível na Play Store para dispositivos Android e na App Store para dispositivos iOS. Ao compartilhar o aplicativo através de um link ou QR code, os usuários podem abrir o link ou escanear o código utilizando o Expo Client em seus próprios dispositivos. Dessa forma.
+
+Essa abordagem simplifica o processo de compartilhamento e testes, eliminando a necessidade de criar versões específicas para cada plataforma ou passar pelo processo de publicação nas lojas de aplicativos. Com o Expo, é possível visualizar e avaliar seu aplicativo em diferentes dispositivos, independentemente de serem Android ou iOS, agilizando o desenvolvimento e tornando mais acessível a demonstração do projeto, o aplicativo é carregado e executado em tempo real no dispositivo do usuário, o Expo oferece outras vantagens conforme mostra a figura 2.
+
+De acordo com (\textcite{Hugo}) o uso do Expo proporciona uma camada de abstração superior ao React Native, resultando em uma experiência aprimorada no desenvolvimento de software. Com o aumento do número de usuários de smartphones, principalmente nas plataformas Android e iOS, a necessidade de criar aplicativos para ambas as plataformas se tornou cada vez mais evidente. Nesse contexto, o Expo oferece uma vantagem no desenvolvimento híbrido, simplificando o processo de criação de aplicativos multiplataforma.
 
 \begin{figure}[htb]
 	\caption{\label{fig:Fig_1}Expo vantagens Fonte: \cite{Expo}}
@@ -120,7 +126,7 @@ evidente. Nesse contexto, o Expo oferece uma vantagem no desenvolvimento híbrid
 	\end{center}
 \end{figure}
 
-
+\clearpage
 \subsection{Gin}
 O framework Gin é uma biblioteca leve e rápida para construção de APIs em Go. Ele se baseia nos princípios do roteamento HTTP e fornece recursos poderosos para o desenvolvimento de aplicativos web escaláveis e de alto desempenho.
 
